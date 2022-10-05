@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=League+Spartan:wght@700&family=Overpass:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Calculator app</title>
+  </head>
+  <body id="demo">
+    <div class="container">
+      <div>
+        <div class="num">
+          <p onclick="theme1()">1</p>
+          <p onclick="theme2()">2</p>
+          <p onclick="theme3()">3</p>
+        </div>
+        <div class="title">
+          <h2 class="calc">calc</h2>
+          <p class="theme">THEME</p>
+          <div class="toggle">
+            <label class="radio-button">
+              <input type="radio" name="control" checked onclick="theme1()"  />
+              <span class="checkmark" id="first"></span>
+            </label>
+            <label class="radio-button">
+              <input type="radio" name="control" onclick="theme2()"/>   
+              <span class="checkmark"   id="two" ></span>        
+             </label>
+            <label class="radio-button">
+              <input type="radio" name="control" onclick="theme3()" />
+              <span class="checkmark"  id="three"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <input type="text" class="screen" id="output-screen" />
+      <div class="keypad" onmouseover="overRock()" onmouseout="outRock()">
+        <button class="button" onclick="display('7')">7</button>
+        <button class="button" onclick="display('8')">8</button>
+        <button class="button" onclick="display('9')">9</button>
+        <button class="del" onclick="del('del')">DEL</button>
+        <button class="button" onclick="display('4')">4</button>
+        <button class="button" onclick="display('5')">5</button>
+        <button class="button" onclick="display('6')">6</button>
+        <button class="button" onclick="display('+')">+</button>
+        <button class="button" onclick="display('1')">1</button>
+        <button class="button" onclick="display('2')">2</button>
+        <button class="button" onclick="display('3')">3</button>
+        <button class="button" onclick="display('-')">-</button>
+        <button class="button" onclick="display('.')">.</button>
+        <button class="button" onclick="display('0')">0</button>
+        <button class="button" onclick="display('/')">/</button>
+        <button class="button" onclick="display('*')">*</button>
+        <button class="reset" onclick="reset('reset')">RESET</button>
+        <button class="equal" onclick="equal('=')">=</button>
+      </div>
+    </div>
+    <script src="myscript.js"></script>
+  </body>
+</html>
